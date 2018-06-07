@@ -1,0 +1,85 @@
+[
+
+    {
+        "competence": {
+            "competence_name" : "html5",
+            "niveau" : 5
+            
+        }
+    },
+
+    {
+        "competence":{
+            "competence_name" : "nodejs",
+            "niveau" : 2
+            
+        }
+    },
+
+    {
+        "competence":{
+            "competence_name":"javascript", 
+            "niveau" : 3
+            
+        }
+    },
+
+    {
+        "competence":{ 
+
+            "competence_name" : "css3",
+            "niveau" : 5
+            
+        }
+    },
+
+    {
+        "competence": {
+            "competence_name" : "php",
+            "niveau" : 3
+            
+        }
+    },
+
+    {
+        "competence" : {
+            "competence_name" : "angularJs",
+            "niveau" : 1
+            
+        }
+    },
+
+    {
+        "competence" : {
+            "competence_name" : "react",
+            "niveau" : 3
+            
+        }
+    },
+
+    {
+        "competence" : {
+            "competence_name" : "symfony",
+            "niveau" : 4
+            
+        }
+    },
+
+    {
+        "competence" : {
+
+            "competence_name" : "zendFramework",
+            "niveau" : 2
+            
+        }
+    },
+    
+    {
+        "competence" : {
+
+            "competence_name" : "bootstrap4",
+            "niveau" : 5
+            
+        }
+    }
+]
