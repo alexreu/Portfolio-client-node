@@ -29,7 +29,7 @@ function etoile(nbStars){
     }
 
     var result ="";
-    var rest = 0;
+    var reste = 0;
 
     reste = 6 - nbStars;
     result = stars.repeat(nbStars) + noStars.repeat(reste);
@@ -42,17 +42,26 @@ $.ajax({
     url: "http://localhost:3012/public/data/data.json",
     success : function(data){
 
-        var tab = [];
-
         data.sort(function(a, b){
             return b.competence.niveau - a.competence.niveau;
         });
         
+
         for (var i=0; i<data.length; i++){
-            var tmp = '<li class="list-group-item text-uppercase">'+ data[i].competence.competence_name + " " + etoile(data[i].competence.niveau) + '</li>';
-            tab.push(tmp);
+            if(i<5){
+                $("#liste").append("<li class='list-group-item text-uppercase'>"+ data[i].competence.competence_name + " " + etoile(data[i].competence.niveau) + "</li>")
+            }else {
+                $("#liste2").append("<li class='list-group-item text-uppercase'>"+ data[i].competence.competence_name + " " + etoile(data[i].competence.niveau) + "</li>")
+            }
+
+            // essaie pour dynamiser la creation des liste
+            // if (i<5){
+            //     $("#liste").append("<li id="+ i +" class='list-group-item text-uppercase'>"+ data[i].competence.competence_name + " " + etoile(data[i].competence.niveau) + "</li>")
+            // }else{
+            //     $("#liste-container").append("<ul id=liste"+ i +"></ul>");
+            //     $("#liste"+i).append("<li id="+ i +" class='list-group-item text-uppercase'>"+ data[i].competence.competence_name + " " + etoile(data[i].competence.niveau) + "</li>");
+            // }
         }
         
-        $("#liste").html(tab);
     }
 });
